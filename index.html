@@ -1,188 +1,128 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Ayansh Medical Hall</title>
-<meta name="description" content="Ayansh Medical Hall — generic medicines trading. Site under construction." />
-<link rel="icon" href="assets/logo.png" type="image/png" />
-<style>
-  :root {
-    --deep-teal: #0f3d3e;
-    --leaf-green: #2f8f3e;
-    --accent-orange: #e8792b;
-    --bg: #f7f9f8;
-    --card-bg: #ffffff;
-    --text: #16211f;
-    --muted: #5b6b67;
-    --border: #e2e8e5;
-  }
-
-  * { box-sizing: border-box; }
-
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: linear-gradient(180deg, var(--bg) 0%, #eef3f0 100%);
-    color: var(--text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 24px;
-  }
-
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    max-width: 560px;
-    width: 100%;
-    padding: 48px 40px;
-    text-align: center;
-    box-shadow: 0 20px 60px rgba(15, 61, 62, 0.08);
-  }
-
-  .logo {
-    width: 96px;
-    height: 96px;
-    object-fit: contain;
-    margin-bottom: 20px;
-  }
-
-  .logo-fallback {
-    width: 96px;
-    height: 96px;
-    margin: 0 auto 20px;
-    border-radius: 20px;
-    background: linear-gradient(135deg, var(--deep-teal), var(--leaf-green));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: 700;
-    font-size: 40px;
-    font-family: Georgia, serif;
-  }
-
-  h1 {
-    font-size: 26px;
-    margin: 0 0 6px;
-    color: var(--deep-teal);
-    letter-spacing: 0.2px;
-  }
-
-  .tagline {
-    color: var(--muted);
-    font-size: 14px;
-    margin: 0 0 28px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-  }
-
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(232, 121, 43, 0.1);
-    color: var(--accent-orange);
-    border: 1px solid rgba(232, 121, 43, 0.3);
-    padding: 8px 18px;
-    border-radius: 999px;
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.4px;
-    margin-bottom: 32px;
-  }
-
-  .badge .dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--accent-orange);
-  }
-
-  .divider {
-    height: 1px;
-    background: var(--border);
-    margin: 28px 0;
-  }
-
-  .contact {
-    text-align: left;
-    display: grid;
-    gap: 14px;
-  }
-
-  .contact-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .contact-row .icon {
-    flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-    margin-top: 2px;
-    color: var(--leaf-green);
-  }
-
-  .contact-row .label {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    color: var(--muted);
-    margin: 0 0 2px;
-  }
-
-  .contact-row .value {
-    font-size: 15px;
-    color: var(--text);
-    line-height: 1.4;
-  }
-
-  footer {
-    margin-top: 32px;
-    font-size: 12px;
-    color: var(--muted);
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayansh Medical Hall | Generic Medicines, Ayurvedic &amp; Nutraceutical Trading</title>
+  <meta name="description" content="Ayansh Medical Hall markets generic medicines, ayurvedic formulations, and nutraceuticals from Bhagalpur, Bihar — tablets, syrups, drops, and protein supplements.">
+  <link rel="canonical" href="https://ayanshmedical.com/">
+  <meta property="og:title" content="Ayansh Medical Hall | Generic Medicines, Ayurvedic &amp; Nutraceutical Trading">
+  <meta property="og:description" content="Generic medicines, ayurvedic formulations, and nutraceuticals marketed by Ayansh Medical Hall, Bhagalpur, Bihar.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ayanshmedical.com/">
+  <link rel="icon" href="assets/images/logo/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
 </head>
-<body>
-  <main class="card">
-    <img src="assets/logo.png" alt="Ayansh Medical Hall logo" class="logo"
-         onerror="this.replaceWith(Object.assign(document.createElement('div'), {className: 'logo-fallback', textContent: 'A'}))" />
+<body data-page="home" data-hero="dark">
+  <site-header></site-header>
 
-    <h1>Ayansh Medical Hall</h1>
-
-    <div class="badge"><span class="dot"></span>Website under construction</div>
-
-    <div class="divider"></div>
-
-    <div class="contact">
-      <div class="contact-row">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/>
-          <circle cx="12" cy="10" r="3"/>
-        </svg>
-        <div>
-          <p class="label">Address</p>
-          <p class="value">01, Jagdishpur Road, Near Petrol Pump,<br />Baijani, Bhagalpur, Bihar&nbsp;-&nbsp;812005</p>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-panel glass-panel">
+          <span class="eyebrow">Marketed by Ayansh Medical Hall</span>
+          <h1>Reliable Generic Medicines, Ayurvedic &amp; Nutraceutical Products</h1>
+          <p>Based in Bhagalpur, Bihar, Ayansh Medical Hall markets a trusted range of tablets, syrups, drops, and protein supplements manufactured by licensed pharmaceutical partners.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="products.html">View Products</a>
+            <a class="btn btn-glass" href="contact.html">Get in Touch</a>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="ticker">
+        <div class="ticker-track">
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="20" height="6" rx="3" transform="rotate(-45 12 12)"/><line x1="12" y1="7.5" x2="12" y2="16.5" transform="rotate(-45 12 12)"/></svg></span>Tablets</span>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v5l-5 10a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3L14 7V2"/><path d="M6.5 13.5h11"/></svg></span>Syrups</span>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9-10c-1.2-3.2 1-6 4-6 2.3 0 3.7 1.5 5 3.5C13.3 6.5 14.7 5 17 5c3 0 5.2 2.8 4 6-2 5.5-9 10-9 10z"/></svg></span>Ayurvedic</span>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span>Quality Assured</span>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 8.4-8 11-4.6-2.6-8-6-8-11V5l8-3z"/></svg></span>Nutraceuticals</span>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h1l2-6h4l2 6h9M3 17v2h18v-2M8 11V7a2 2 0 0 1 2-2h1"/><circle cx="7" cy="19.5" r="1.5"/><circle cx="18" cy="19.5" r="1.5"/></svg></span>Reliable Supply</span>
 
-    <footer>&copy; <span id="year"></span> Ayansh Medical Hall. All rights reserved.</footer>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="20" height="6" rx="3" transform="rotate(-45 12 12)"/><line x1="12" y1="7.5" x2="12" y2="16.5" transform="rotate(-45 12 12)"/></svg></span>Tablets</span>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2h6M10 2v5l-5 10a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3L14 7V2"/><path d="M6.5 13.5h11"/></svg></span>Syrups</span>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9-10c-1.2-3.2 1-6 4-6 2.3 0 3.7 1.5 5 3.5C13.3 6.5 14.7 5 17 5c3 0 5.2 2.8 4 6-2 5.5-9 10-9 10z"/></svg></span>Ayurvedic</span>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></span>Quality Assured</span>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 8.4-8 11-4.6-2.6-8-6-8-11V5l8-3z"/></svg></span>Nutraceuticals</span>
+          <span class="ticker-item"><span class="ticker-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h1l2-6h4l2 6h9M3 17v2h18v-2M8 11V7a2 2 0 0 1 2-2h1"/><circle cx="7" cy="19.5" r="1.5"/><circle cx="18" cy="19.5" r="1.5"/></svg></span>Reliable Supply</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="grid grid-2" style="align-items:center;">
+        <div class="reveal">
+          <span class="eyebrow">About Us</span>
+          <h2>Trusted trading of generic &amp; ayurvedic medicines</h2>
+          <p>Ayansh Medical Hall markets a growing range of generic medicines, ayurvedic formulations, and nutraceutical products &mdash; from pain-relief tablets and digestive syrups to protein supplements &mdash; manufactured by licensed partners and marketed under our own brand.</p>
+          <p>We're based at 01, Jagdishpur Road, Near Petrol Pump, Baijani, Bhagalpur, Bihar, serving retailers and customers across the region.</p>
+          <a class="btn btn-ghost" href="about.html">More about us &rarr;</a>
+        </div>
+        <div class="reveal" style="display:flex; justify-content:center;">
+          <img src="assets/images/logo/logo.png" alt="Ayansh Medical Hall logo" style="width:220px; height:220px;">
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <span class="eyebrow">Our Product Range</span>
+      <h2>Tablets, syrups, drops &amp; supplements</h2>
+      <div class="grid grid-3">
+        <div class="card product-card reveal">
+          <img src="assets/images/products/zoxfen.jpg" alt="Zoxfen Tablets box">
+          <span class="tag">Tablets</span><span class="tag-rx">Rx</span>
+          <h3>Zoxfen</h3>
+          <p class="composition">Diclofenac Potassium, Paracetamol &amp; Chlorzoxazone Tablets</p>
+        </div>
+        <div class="card product-card reveal">
+          <img src="assets/images/products/srylyco-master.jpg" alt="Srylyco Master Syrup bottle and box">
+          <span class="tag">Ayurvedic Tonic</span>
+          <h3>Srylyco Master</h3>
+          <p class="composition">Natural Iron, Lycopene &amp; Multivitamins Syrup</p>
+        </div>
+        <div class="card product-card reveal">
+          <img src="assets/images/products/kofveda.jpg" alt="KofVeda Ayurvedic Cough Syrup">
+          <span class="tag">Ayurvedic</span>
+          <h3>KofVeda</h3>
+          <p class="composition">Ayurvedic Cough Syrup &mdash; relieves cough &amp; soothes throat</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top: var(--space-6);">
+        <a class="btn btn-primary" href="products.html">View All Products &rarr;</a>
+      </div>
+    </section>
+
+    <section class="container">
+      <span class="eyebrow">Why Ayansh Medical Hall</span>
+      <h2>Built on trust, quality &amp; availability</h2>
+      <ul class="grid grid-4" style="list-style:none; padding:0;">
+        <li class="card reveal">Quality-assured products from licensed manufacturers</li>
+        <li class="card reveal">Wide range across allopathic, ayurvedic &amp; nutraceutical categories</li>
+        <li class="card reveal">Reliable local supply across Bhagalpur &amp; nearby regions</li>
+        <li class="card reveal">Responsive support over call &amp; WhatsApp</li>
+      </ul>
+    </section>
+
+    <section class="container">
+      <div class="cta-band reveal">
+        <h2>Looking for a specific product or bulk order?</h2>
+        <p>Reach out with your requirement and we'll help you find the right product.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a class="btn btn-primary" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <site-footer></site-footer>
+  <whatsapp-fab></whatsapp-fab>
+
+  <script src="js/components.js" defer></script>
+  <script src="js/nav.js" defer></script>
+  <script src="js/animations.js" defer></script>
 </body>
 </html>

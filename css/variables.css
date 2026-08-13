@@ -1,0 +1,50 @@
+:root {
+  /* Brand colors — drawn from the Ayansh Medical Hall logo (deep teal ribbon, leaf green sweep, orange star) */
+  --teal-900: #0f3d3e;
+  --teal-800: #16524f;
+  --green-600: #2f8f3e;
+  --green-500: #3fa84a;
+  --green-100: #e6f5e8;
+  --orange-600: #e0721f;
+  --orange-100: #fdf0e4;
+
+  --brand-gradient: linear-gradient(135deg, var(--teal-900) 0%, var(--green-600) 100%);
+
+  /* Neutrals */
+  --bg: #f5f7fa;
+  --surface: #ffffff;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --border: #e2e8f0;
+
+  /* Spacing scale (4px base) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  /* Header height (logo + padding-block), used to pull the hero up behind the sticky header */
+  --header-height: 80px;
+
+  /* Type */
+  --font-sans: "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* Glassmorphism recipe */
+  --glass-bg: rgba(255, 255, 255, 0.14);
+  --glass-bg-strong: rgba(255, 255, 255, 0.22);
+  --glass-border: rgba(255, 255, 255, 0.35);
+  --glass-blur: 16px;
+  --glass-shadow: 0 8px 32px rgba(15, 61, 62, 0.18);
+
+  --max-width: 1240px;
+  --transition-fast: 180ms ease;
+  --transition-base: 320ms ease;
+}
